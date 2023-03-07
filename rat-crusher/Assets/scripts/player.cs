@@ -27,6 +27,19 @@ public class player : MonoBehaviour
         anim.SetFloat("hLook", lookH);
         anim.SetFloat("Speed", Mathf.Abs(horizontal));
         //put rat hitting here (keybind to spacebar)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, new Vector2(lookH,0), 3.0f, LayerMask.GetMask("rat"));
+            if(hit.collider != null)
+            {
+                Debug.Log(hit);
+                ratController rat = hit.collider.GetComponent<ratController>();
+                if(rat != null)
+                {
+                    rat.die();
+                }
+            }
+        }
     }
     void FixedUpdate()
     {
