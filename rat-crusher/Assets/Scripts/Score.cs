@@ -10,11 +10,15 @@ public class Score : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
     public TextMeshProUGUI highScoreText;
-    public GameObject player;
     public GameObject gameOver;
-    private float time = 5f;
-    private int score;
+    private float time = 60f;
+    public int score;
     private int highScore;
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
 
     void Update()
     {
@@ -48,7 +52,7 @@ public class Score : MonoBehaviour
         {
             highScore = 0;
         }
-        //score = player.GetComponent<PlayerMove>().score;
+        scoreText.text = "Score: " + score;
         if(score >= highScore)
         {
             PlayerPrefs.SetInt("HighScore", score);
