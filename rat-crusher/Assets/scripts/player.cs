@@ -22,13 +22,20 @@ public class player : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         anim.SetFloat("hMove", horizontal);
-        if (!Mathf.Approximately(horizontal, 0.0f) || !Mathf.Approximately(horizontal, 0.0f))
-            lookH = horizontal;
+        if(horizontal > 0)
+        {
+            lookH = 1;
+        }
+        else if(horizontal < 0)
+        {
+            lookH = -1;
+        }
         anim.SetFloat("hLook", lookH);
         anim.SetFloat("Speed", Mathf.Abs(horizontal));
         //put rat hitting here (keybind to spacebar)
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
+            anim.SetBool("hit", true);
             RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, new Vector2(lookH,0), 3.0f, LayerMask.GetMask("rat"));
             if(hit.collider != null)
             {
@@ -39,6 +46,10 @@ public class player : MonoBehaviour
                     rat.die();
                 }
             }
+        }
+        else
+        {
+            anim.SetBool("hit", false);
         }
     }
     void FixedUpdate()
