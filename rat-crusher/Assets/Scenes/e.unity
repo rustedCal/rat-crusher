@@ -322,7 +322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196.16, y: -233.58}
+  m_AnchoredPosition: {x: -396.75, y: -233.58}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318057813
@@ -345,12 +345,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Christian - Sound/Music
+  m_text: 'Christian Donovan - Sound/Music
 
     Jackson Covey - Coding
 
-    James Smith -
-    Coding
+    James
+    Smith - Coding
 
     Mika Nguyen - Art'
   m_isRightToLeft: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -553.11694, y: -470.4673, z: -243.85803, w: 70.07477}
+  m_margin: {x: -553.11694, y: -470.4673, z: -1342.5968, w: 70.07477}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
