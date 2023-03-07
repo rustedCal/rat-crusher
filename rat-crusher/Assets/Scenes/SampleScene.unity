@@ -463,7 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284399816}
   - component: {fileID: 1284399815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
