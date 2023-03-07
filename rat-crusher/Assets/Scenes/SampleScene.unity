@@ -431,7 +431,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 1311687032}
-  GameOver: {fileID: 588303722}
+  scoreText: {fileID: 0}
+  finalScoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
+  player: {fileID: 0}
+  gameOver: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
