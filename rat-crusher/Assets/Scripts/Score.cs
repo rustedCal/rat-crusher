@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
 
-    [SerializeField] TextMeshProUGUI timetext;
-    private float time = 60f;
+    public TextMeshProUGUI timeText;
+    public GameObject GameOver;
+    private float time = 5f;
+
 
     void Update()
     {
-        if(time >= 1)
+        if(time >= 0)
         {
             time -= Time.deltaTime;
-            timetext.text = time + "s";
+            timeText.text = Mathf.Round(time) + "s";
         }
-        else if(time <= 0)
+        else if(time < 0)
         {
-            SceneManager.LoadScene("GameOver");
+            Time.timeScale = 0;
+            GameOver.SetActive(true);
         }
     }
-
 }
