@@ -6,12 +6,19 @@ public class ratController : MonoBehaviour
 {
     public float speed = 5.0f;
     Rigidbody2D rb;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     public GameObject player;
+=======
+>>>>>>> parent of e982093 (dsadas)
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> parent of e982093 (dsadas)
 
 =======
     public AudioClip death;
@@ -48,7 +55,6 @@ public class ratController : MonoBehaviour
     }
     public void die()
     {
-        aud.PlayOneShot(death);
         Debug.Log("rat ded");
         dead = true;
     }
