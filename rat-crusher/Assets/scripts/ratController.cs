@@ -6,27 +6,12 @@ public class ratController : MonoBehaviour
 {
     public float speed = 5.0f;
     Rigidbody2D rb;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
     public GameObject player;
-=======
->>>>>>> parent of e982093 (dsadas)
-=======
->>>>>>> parent of e982093 (dsadas)
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of e982093 (dsadas)
     }
->>>>>>> parent of e982093 (dsadas)
-
-=======
     public AudioClip death;
     AudioSource aud;
     Animator anim;
@@ -37,23 +22,16 @@ public class ratController : MonoBehaviour
         aud = gameObject.GetComponent<AudioSource>();
         anim = gameObject.GetComponent<Animator>();
         //get player pos for look dir in anim, if < rat pos then 0, else 1
->>>>>>> Stashed changes
     }
     void Update()
-    {
-
-<<<<<<< Updated upstream
+    { 
     }
     public void die()
     {
-<<<<<<< HEAD
         player = GameObject.FindGameObjectWithTag("Player");
-=======
         Debug.Log("rat ded");
->>>>>>> parent of e982093 (dsadas)
         Destroy(gameObject);
         player.GetComponent<Score>().score += 1;
-=======
 
         //animation
         anim.SetBool("dead", dead);
@@ -84,6 +62,5 @@ public class ratController : MonoBehaviour
                 rb.velocity.Set(-speed, 0.0f);
             }
         }
->>>>>>> Stashed changes
     }
 }
