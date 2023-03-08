@@ -14,9 +14,12 @@ GameObject:
   - component: {fileID: 4881687816419644248}
   - component: {fileID: 4881687816419644250}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 5885940406886383536}
   - component: {fileID: 6880039803058328071}
   - component: {fileID: 9194002702071388319}
+=======
+>>>>>>> parent of e982093 (dsadas)
 =======
 >>>>>>> parent of e982093 (dsadas)
   m_Layer: 3
@@ -151,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   speed: 5
   death: {fileID: 8300000, guid: 3a7c207835fac1a42b70acd82e87e704, type: 3}
 --- !u!82 &5885940406886383536
@@ -284,5 +288,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 35
+=======
+>>>>>>> parent of e982093 (dsadas)
 =======
 >>>>>>> parent of e982093 (dsadas)

@@ -850,6 +850,9 @@ GameObject:
 <<<<<<< HEAD
 =======
   - component: {fileID: 519420030}
+<<<<<<< HEAD
+>>>>>>> parent of e982093 (dsadas)
+=======
 >>>>>>> parent of e982093 (dsadas)
   m_Layer: 0
   m_Name: Main Camera
