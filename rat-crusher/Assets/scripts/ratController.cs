@@ -8,10 +8,6 @@ public class ratController : MonoBehaviour
     Rigidbody2D rb;
     public GameObject player;
     // Start is called before the first frame update
-    void Start()
-    {
-        rb = gameObject.GetComponent<Rigidbody2D>();
-    }
     public AudioClip death;
     AudioSource aud;
     Animator anim;
@@ -40,11 +36,6 @@ public class ratController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    public void die()
-    {
-        Debug.Log("rat ded");
-        dead = true;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
