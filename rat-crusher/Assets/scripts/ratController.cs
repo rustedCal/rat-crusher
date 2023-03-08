@@ -7,6 +7,11 @@ public class ratController : MonoBehaviour
     public float speed = 5.0f;
     Rigidbody2D rb;
     public GameObject player;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
     public AudioClip death;
     AudioSource aud;
     Animator anim;
@@ -19,14 +24,15 @@ public class ratController : MonoBehaviour
         //get player pos for look dir in anim, if < rat pos then 0, else 1
     }
     void Update()
-    {
-
+    { 
     }
     public void die()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log("rat ded");
         Destroy(gameObject);
         player.GetComponent<Score>().score += 1;
+
         //animation
         anim.SetBool("dead", dead);
         //killing
@@ -35,7 +41,11 @@ public class ratController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public void die()
+    {
+        Debug.Log("rat ded");
+        dead = true;
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         player play = collision.GetComponent<player>();
