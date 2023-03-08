@@ -10,18 +10,18 @@ public class player : MonoBehaviour
     float vertical;
     public float speed = 3.0f;
     //animation stuff
-    //Animator anim;
+    Animator anim;
     float lookH;
 
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        //anim = gameObject.GetComponent<Animator>();
+        anim = gameObject.GetComponent<Animator>();
     }
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
-        //anim.SetFloat("hMove", horizontal);
+        anim.SetFloat("hMove", horizontal);
         if(horizontal > 0)
         {
             lookH = 1;
@@ -30,8 +30,8 @@ public class player : MonoBehaviour
         {
             lookH = -1;
         }
-        //anim.SetFloat("hLook", lookH);
-        //anim.SetFloat("Speed", Mathf.Abs(horizontal));
+        anim.SetFloat("hLook", lookH);
+        anim.SetFloat("Speed", Mathf.Abs(horizontal));
         //put rat hitting here (keybind to spacebar)
         if (Input.GetKey(KeyCode.Space))
         {
@@ -49,7 +49,7 @@ public class player : MonoBehaviour
         }
         else
         {
-            //anim.SetBool("hit", false);
+            anim.SetBool("hit", false);
         }
     }
     void FixedUpdate()
